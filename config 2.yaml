@@ -1,0 +1,151 @@
+# ============================================================
+#  Multi-Board Job Agent — Configuration
+#  Edit this file to tune search behaviour and thresholds.
+# ============================================================
+
+candidate:
+  name: "Samiha Chowdhury"
+  email: "Samiha.chowdhury375@gmail.com"
+  phone: "(571) 244-7164"
+  location: "Fairfax, VA"
+  linkedin_url: "https://www.linkedin.com/in/samiha-chowdhury-pm/"
+
+# --- Job search parameters ---
+search:
+  keywords:
+    - "Technical Project Manager"
+    - "Technical Program Manager"
+    - "IT Project Manager"
+    - "IT Program Manager"
+    - "ServiceNow Project Manager"
+    - "Agile Project Manager"
+  location: "Washington DC-Baltimore Area"
+  # LinkedIn geo IDs — Washington DC Metro = 102571732, United States = 103644278
+  geo_id: "102571732"
+  # How many pages to scan per keyword (25 results/page)
+  pages_per_keyword: 1
+  # Auto-apply mode should stay focused on jobs the agent can actually submit.
+  easy_apply_only: true
+  # Date posted filter: r86400=24h, r604800=week, r2592000=month
+  date_posted: "r86400"
+  # Experience levels: 2=Associate, 3=Mid-Senior, 4=Director, 5=Executive
+  experience_levels:
+    - 3   # Mid-Senior
+    - 4   # Director
+  # Remote/Hybrid/On-site: 1=On-site, 2=Remote, 3=Hybrid
+  work_types:
+    - 1
+    - 2
+    - 3
+
+# --- Scoring & application thresholds ---
+scoring:
+  # Save AI credits by locally rejecting obvious low-fit jobs before paid scoring.
+  prefilter_enabled: true
+  # Jobs at or above this score get an Apply Pack generated
+  generate_pack_threshold: 84
+  # Jobs at or above this score are AUTO-APPLIED (no human needed)
+  auto_apply_threshold: 88
+  # Skip jobs below this score entirely
+  minimum_score: 55
+  # Maximum applications per day (safety limit)
+  max_applications_per_day: 5
+  # Maximum applications per run
+  max_applications_per_run: 1
+
+# --- Applications ---
+applications:
+  # Review-only safety mode. When false, the agent scans, scores, syncs,
+  # and generates apply packs, but never submits applications.
+  enabled: true
+
+# --- Scheduler ---
+scheduler:
+  # How often to scan all configured boards (minutes)
+  scan_interval_minutes: 15
+  # Keep scanning 24/7 unless this is set true.
+  quiet_hours_enabled: false
+  # Quiet hours — no scanning between these hours (24h local time)
+  quiet_hours_start: 23
+  quiet_hours_end: 7
+
+# --- Browser behaviour ---
+browser:
+  headless: true
+  # Human-like delay range between actions (seconds)
+  min_delay: 1.5
+  max_delay: 4.0
+  # Viewport
+  width: 1440
+  height: 900
+  # Session cookie file
+  cookies_file: "session/linkedin_cookies.json"
+
+# --- AI model ---
+ai:
+  # Gemini Flash-Lite is much cheaper than Claude Haiku for this workflow.
+  enabled: true
+  provider: "gemini"
+  model: "gemini-2.5-flash-lite"
+  temperature: 0.2
+  # Max tokens for document generation
+  max_tokens_resume: 2200
+  max_tokens_cover_letter: 900
+  max_tokens_scoring: 700
+
+# --- Budget guardrails ---
+budget:
+  # Absolute caps. These keep a $10 Gemini budget from disappearing into a backlog.
+  max_ai_scoring_calls_per_run: 5
+  max_document_jobs_per_run: 1
+  max_document_jobs_per_day: 3
+
+# --- JobSpy (Indeed, ZipRecruiter, Glassdoor) ---
+jobspy:
+  # Which boards to search
+  sites:
+    - indeed
+  location: "United States"
+  hours_old: 24          # jobs posted in the last day
+  results_per_keyword: 10
+
+# --- Dice.com ---
+dice:
+  enabled: true
+  keywords:
+    - "Technical Project Manager"
+    - "Technical Program Manager"
+    - "IT Project Manager"
+  location: "United States"
+  results_per_keyword: 10
+
+# --- CareerBuilder.com ---
+careerbuilder:
+  enabled: true
+  keywords:
+    - "Technical Project Manager"
+    - "Technical Program Manager"
+    - "IT Project Manager"
+  location: "United States"
+  results_per_keyword: 10
+
+# --- USAJobs.gov (federal jobs) ---
+# Free API key at: https://developer.usajobs.gov/
+usajobs:
+  keywords:
+    - "Technical Project Manager"
+    - "IT Project Manager"
+    - "Program Manager"
+    - "Project Manager Information Technology"
+    - "Agile Project Manager"
+  location: "Washington, DC"
+  radius_miles: 50
+  results_per_keyword: 25
+  include_remote: true
+
+# --- Output paths ---
+output:
+  resumes_dir: "output/resumes"
+  cover_letters_dir: "output/cover_letters"
+  db_path: "data/jobs.db"
+  logs_dir: "logs"

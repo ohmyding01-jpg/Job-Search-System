@@ -1,0 +1,51 @@
+# Add this near the top of main.py, after imports but before load_config()
+
+CANDIDATE_NAME = None
+CANDIDATE_DIR = None
+
+def set_candidate_context(candidate_name: str):
+    """Set the candidate context for multi-tenant operation."""
+    global CANDIDATE_NAME, CANDIDATE_DIR
+    CANDIDATE_NAME = candidate_name
+    CANDIDATE_DIR = Path(__file__).parent / "candidates" / candidate_name
+    if not CANDIDATE_DIR.exists():
+        raise ValueError(f"Candidate directory not found: {CANDIDATE_DIR}")
+
+
+def load_config() -> dict:
+    if CANDIDATE_DIR:
+        cfg_path = CANDIDATE_DIR / "config.yaml"
+    else:
+        cfg_path = Path(__file__).parent / "config.yaml"
+    with open(cfg_path) as f:
+        return yaml.safe_load(f)
+
+
+def load_profile() -> dict:
+    if CANDIDATE_DIR:
+        profile_path = CANDIDATE_DIR / "resume_profile.yaml"
+    else:
+        profile_path = Path(__file__).parent / "resume_profile.yaml"
+    with open(profile_path) as f:
+        return yaml.safe_load(f)
+
+
+def get_candidate_data_dir() -> Path:
+    """Get the data directory for the current candidate."""
+    if CANDIDATE_DIR:
+        return CANDIDATE_DIR / "data"
+    return Path(__file__).parent / "data"
+
+
+def get_candidate_session_dir() -> Path:
+    """Get the session directory for the current candidate."""
+    if CANDIDATE_DIR:
+        return CANDIDATE_DIR / "session"
+    return Path(__file__).parent / "session"
+
+
+def get_candidate_documents_dir() -> Path:
+    """Get the documents output directory for the current candidate."""
+    if CANDIDATE_DIR:
+        return CANDIDATE_DIR / "documents"
+    return Path(__file__).parent / "documents"

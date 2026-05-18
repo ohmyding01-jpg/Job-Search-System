@@ -1,0 +1,182 @@
+# ============================================================
+#  Stephen A. Muliokela — Master Resume Profile
+#  Source: MuliokelaStephen(Resume)_SQL Expert_ DBA.docx
+# ============================================================
+
+personal:
+  name: "Stephen A. Muliokela"
+  title: "Senior SQL DBA | Database Engineer | Cloud Data Platform Administrator"
+  email: "muliokelastephen@yahoo.com"
+  phone: "410-251-9925"
+  location: "Hoover, AL"
+  linkedin: ""
+  visa_status: "Authorized to work in the U.S."
+
+summary: |
+  Senior SQL DBA and Database Engineer with 17+ years of hands-on experience across
+  SQL Server administration, performance optimization, high availability, cloud
+  migration, and enterprise data operations. Deep expertise in SQL Server (2000-2019),
+  Azure SQL, AWS database services, Snowflake, ETL/ELT pipelines, security hardening,
+  and disaster recovery. Strong track record in enterprise production support, large
+  migration programs, automation with PowerShell/Python, and mentoring DBA/dev teams.
+
+skills:
+  methodologies:
+    - SDLC
+    - DevOps collaboration
+    - Six Sigma Black Belt methodology
+    - Production change governance
+    - 24x7 operations support
+  database_administration:
+    - SQL Server Administration (2000-2019)
+    - SQL Server performance tuning and query optimization
+    - Index strategy and execution plan optimization
+    - Backup/restore strategy and recovery models
+    - SQL Server Agent jobs and automation
+    - Policy-Based Management and SQL auditing
+    - Capacity planning and instance health monitoring
+  high_availability_disaster_recovery:
+    - Always On Availability Groups
+    - Windows Failover Clustering
+    - Database Mirroring
+    - Log Shipping
+    - Replication (snapshot, transactional, merge, peer-to-peer)
+    - Disaster recovery planning (RPO/RTO)
+  cloud_data_platforms:
+    - Azure SQL / Azure SQL Managed Instance
+    - AWS RDS / EC2 / EBS / CloudWatch
+    - Snowflake (warehouses, RBAC, masking, secure sharing)
+    - Hybrid and cloud migration (online/offline)
+    - Data ingestion (Snowpipe, COPY INTO, external stages)
+  bi_etl:
+    - SSIS
+    - SSRS
+    - SSAS
+    - ETL/ELT pipeline design
+    - DQS and MDS
+    - Change Data Capture (CDC)
+  security:
+    - RBAC and least privilege design
+    - TDE and encryption at rest/in transit
+    - Certificate and endpoint security
+    - Audit/compliance controls
+  programming:
+    - T-SQL
+    - PowerShell
+    - Python
+    - DAX
+    - MDX
+    - DMX
+    - C++
+    - Visual Basic
+  tools:
+    - SQL Sentry / SentryOne
+    - Redgate
+    - SQL Profiler
+    - Extended Events
+    - Azure Data Studio
+    - BCP / DTA / sqldiag / tablediff
+
+certifications:
+  - "Microsoft Certified Solutions Expert (MCSE) — Data Management and Analytics"
+  - "Microsoft Certified Solutions Associate (MCSA) — SQL Server"
+  - "Microsoft Certified Database Administrator (MCDBA) — SQL Server"
+  - "Microsoft Certified IT Professional (MCITP) — SQL Server"
+  - "Microsoft Certified Technology Specialist (MCTS) — SQL Server"
+  - "Microsoft Certified: Azure Fundamentals"
+  - "AWS Certified Cloud Practitioner"
+  - "AWS Certified Database Specialty"
+  - "AWS Certified SysOps Administrator"
+  - "Master Six Sigma Black Belt"
+  - "Six Sigma Black Belt"
+
+education:
+  - degree: "Master's in Applied Information Technology"
+    institution: "Towson State University"
+    year: ""
+  - degree: "Bachelor's in Computer Science"
+    institution: "University of Maryland Eastern Shore"
+    year: ""
+
+experience:
+  - title: "Senior Database Administrator"
+    company: "HireRight"
+    location: ""
+    start: "Sep 2019"
+    end: "Present"
+    achievements:
+      - "Administers enterprise SQL Server and Snowflake platforms in production environments"
+      - "Designs Snowflake warehouse scaling and cost optimization strategies"
+      - "Implements Snowflake security model (RBAC, row-level controls, masking)"
+      - "Builds and supports ETL/ELT pipelines and cloud data ingestion flows"
+      - "Leads SQL Server HA/DR architecture including Always On and clustering"
+      - "Performs deep SQL Server performance tuning across I/O, CPU, memory, TempDB"
+      - "Automates DBA operations using PowerShell, T-SQL, and Python"
+      - "Mentors database teams and coordinates with DevOps for production reliability"
+
+  - title: "Senior Database Administrator"
+    company: "American Credit Acceptance"
+    location: ""
+    start: "Feb 2017"
+    end: "Sep 2019"
+    achievements:
+      - "Led migration of 1,000+ databases from on-premises to Azure SQL"
+      - "Configured DMS networking, security roles, and migration strategies"
+      - "Managed SQL Server optimization and HA/DR implementations across environments"
+      - "Executed backup/recovery testing to align with enterprise RPO/RTO policies"
+      - "Improved database performance through indexing and query plan optimization"
+      - "Managed DBA/reporting/offshore teams and production change governance"
+
+  - title: "Senior Database Administrator"
+    company: "Imagine Software & Technology Partners"
+    location: ""
+    start: "May 2012"
+    end: "Feb 2017"
+    achievements:
+      - "Managed multi-client SQL Server estates with large database counts"
+      - "Planned and executed on-prem to hybrid/cloud migrations"
+      - "Implemented SQL security/auditing controls and HIPAA-aligned encryption"
+      - "Delivered major performance gains via tuning, indexing, and partitioning"
+      - "Built SSIS/SSRS/SSAS solutions and supported BI/reporting platforms"
+      - "Architected HA solutions that significantly improved uptime and resiliency"
+
+key_projects:
+  - name: "Enterprise SQL + Snowflake Administration at HireRight"
+    outcome: "Operated and optimized mission-critical SQL Server and Snowflake workloads"
+  - name: "1,000+ Database Azure Migration"
+    outcome: "Executed large-scale cloud migration program with controlled downtime"
+  - name: "SQL Server HA/DR Modernization"
+    outcome: "Implemented Always On, clustering, replication, and DR playbooks"
+  - name: "Performance Optimization Initiative"
+    outcome: "Delivered major query/runtime performance improvements"
+
+resume_variants:
+  sql_dba: "MuliokelaStephen(Resume)_SQL Expert_ DBA.docx"
+  database_engineer: "MuliokelaStephen(Resume)_SQL Expert_ DBA.docx"
+  cloud_data_engineer: "MuliokelaStephen(Resume)_SQL Expert_ DBA.docx"
+  devops_dba: "MuliokelaStephen(Resume)_SQL Expert_ DBA.docx"
+  default: "MuliokelaStephen(Resume)_SQL Expert_ DBA.docx"
+
+variant_rules:
+  "SQL DBA": "sql_dba"
+  "Database Administrator": "sql_dba"
+  "Senior Database Administrator": "sql_dba"
+  "SQL Server DBA": "sql_dba"
+  "Database Engineer": "database_engineer"
+  "Cloud Database Engineer": "cloud_data_engineer"
+  "Data Platform Engineer": "cloud_data_engineer"
+  "Snowflake": "cloud_data_engineer"
+  "DevOps DBA": "devops_dba"
+  "default": "default"
+
+preferences:
+  preferred_industries:
+    - Financial Services
+    - Identity and Background Screening
+    - Enterprise SaaS
+    - Healthcare Technology
+    - Government and Regulated Industries
+  avoid_companies: []
+  min_salary: 145000
+  notice_period: "2 weeks"
+  available_from: "Immediately"
