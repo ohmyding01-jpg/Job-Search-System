@@ -1,4 +1,4 @@
-# Multi-Board Job Agent — Samiha Chowdhury
+# Multi-Board Job Agent
 
 Automated job search agent that scans LinkedIn, Dice, CareerBuilder, and supporting boards every 15 minutes, scores jobs against your resume using AI, generates tailored resumes + cover letters, and auto-applies where the board exposes an internal apply flow.
 
